@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REOBOTE CHAVEIRO 24H | Niterói RJ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#111111;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(255,180,0,0.08) 50%,
+        rgba(0,0,0,0.00) 100%
+    ),
+    url('img/hero-bg.webp');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 70px;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#ffb400;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffb400;
+}
+
+.hero-content{
+    flex:1;
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+
+    padding:0 70px 20px 70px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-whatsapp{
+    background:linear-gradient(
+        135deg,
+        #ffd54a 0%,
+        #ffb400 55%,
+        #ff9800 100%
+    );
+
+    color:#111;
+
+    padding:18px 34px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:800;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    border:none;
+
+    box-shadow:
+    0 10px 30px rgba(255,180,0,0.28),
+    0 4px 12px rgba(0,0,0,0.35);
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.btn-whatsapp i{
+    font-size:24px;
+} 
+
+.btn-whatsapp:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 45px rgba(255,180,0,0.40),
+    0 6px 18px rgba(0,0,0,0.4);
+
+    filter:brightness(1.04);
+}
+
+.btn-ligar{
+    background:rgba(0,0,0,0.55);
+    border:2px solid rgba(255,255,255,0.25);
+    color:white;
+    padding:18px 34px;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    backdrop-filter:blur(8px);
+}
+
+/* BARRA INFO */
+
+.barra-info{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#181818;
+    border-top:1px solid rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.item-info i{
+    font-size:26px;
+    color:#ffb400;
+    margin-bottom:10px;
+    display:block;
+} 
+
+.item-info{
+    padding:28px 20px;
+    text-align:center;
+}
+
+.item-info h3{
+    color:#ffb400;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.item-info p{
+    color:#d5d5d5;
+    font-size:15px;
+}
+
+/* SERVIÇOS */
+
+.servicos{
+    padding:70px 50px;
+    background:#111111;
+}
+
+.titulo-section{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo-section h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.titulo-section p{
+    color:#cccccc;
+    font-size:18px;
+}
+
+.servicos-grid{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.servico{
+    background:#1d1d1d;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:22px;
+    padding:28px;
+    transition:0.3s;
+}
+
+.servico:hover{
+    transform:translateY(-6px);
+    border-color:#ffb400;
+}
+
+.servico h3{
+    color:#ffb400;
+    font-size:28px;
+    margin-bottom:20px;
+    min-height:70px;
+}
+
+.servico ul{
+    padding-left:20px;
+    margin-bottom:25px;
+}
+
+.servico li{
+    color:#f1f1f1;
+    font-size:18px;
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+.btn-servico{
+    display:inline-block;
+    background:#ffb400;
+    color:black;
+    text-decoration:none;
+    padding:15px 24px;
+    border-radius:12px;
+    font-weight:800;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn-servico:hover{
+    transform:scale(1.04);
+}
+
+/* SOBRE */
+
+.sobre{
+    padding:80px 50px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("img/sobre.webp") center/cover no-repeat;
+}
+
+.sobre-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:24px;
+}
+
+.sobre-texto{
+    max-width:700px;
+    margin:auto;
+    text-align:left;
+}
+
+.sobre-texto p{
+    color:#f2f9f8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* CTA */
+
+.cta{
+    padding:55px 30px;
+    text-align:center;
+    background:#ffb400;
+    color:black;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:12px;
+    font-weight:900;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:22px;
+}
+
+.cta a{
+    display:inline-block;
+    background:black;
+    color:white;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:800;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d0d0d;
+    padding:35px;
+    text-align:center;
+}
+
+footer p{
+    color:#999999;
+    font-size:15px;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+    padding:80px 50px;
+    background:#151515;
+}
+
+.depoimentos-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.depoimento{
+    background:#1d1d1d;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:22px;
+    padding:30px;
+    transition:0.3s;
+}
+
+.depoimento:hover{
+    transform:translateY(-8px);
+    border-color:#ffb400;
+}
+
+.stars{
+    color:#ffb400;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.depoimento p{
+    color:#f1f1f1;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.depoimento h4{
+    color:#ffb400;
+    font-size:18px;
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+    .servicos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sobre-container{
+        grid-template-columns:1fr;
+    }
+
+    .barra-info{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:900px){
+
+    /* NAVBAR */
+
+    .navbar{
+        padding:18px 18px;
+        flex-direction:column;
+        gap:16px;
+    }
+
+    .logo{
+        font-size:24px;
+        text-align:center;
+        line-height:1.2;
+    }
+
+    .menu{
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .menu a{
+        font-size:15px;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height:92vh;
+    }
+
+    .hero-content{
+        padding:30px 20px 35px 20px;
+        align-items:flex-end;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+        gap:14px;
+    }
+
+    .btn-whatsapp,
+    .btn-ligar{
+        width:100%;
+        text-align:center;
+        font-size:16px;
+        padding:16px 20px;
+        border-radius:12px;
+    }
+
+    /* INFO */
+
+    .barra-info{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .item-info{
+        padding:22px 14px;
+    }
+
+    .item-info h3{
+        font-size:16px;
+    }
+
+    .item-info p{
+        font-size:14px;
+    }
+
+    /* SERVIÇOS */
+
+    .servicos{
+        padding:55px 18px;
+    }
+
+    .titulo-section{
+        margin-bottom:35px;
+    }
+
+    .titulo-section h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .titulo-section p{
+        font-size:16px;
+    }
+
+    .servicos-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .servico{
+        padding:24px 20px;
+        border-radius:18px;
+    }
+
+    .servico h3{
+        font-size:24px;
+        min-height:auto;
+        margin-bottom:16px;
+    }
+
+    .servico li{
+        font-size:16px;
+        margin-bottom:8px;
+    }
+
+    .btn-servico{
+        width:100%;
+        text-align:center;
+        padding:15px;
+        font-size:15px;
+    }
+
+    /* SOBRE */
+
+    .sobre{
+        padding:55px 18px;
+    }
+
+    .sobre-container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .sobre img{
+        border-radius:18px;
+    }
+
+    .sobre-texto{
+        text-align:left;
+    }
+
+    .sobre-texto h2{
+        font-size:30px;
+        margin-bottom:18px;
+    }
+
+    .sobre-texto p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    /* CTA */
+
+    .cta{
+        padding:45px 20px;
+    }
+
+    .cta h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .cta p{
+        font-size:16px;
+    }
+
+    .cta a{
+        width:100%;
+        max-width:320px;
+        font-size:16px;
+        padding:16px 20px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding:28px 20px;
+    }
+
+    footer p{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    /* DEPOIMENTOS */
+
+.depoimentos{
+    padding:55px 18px;
+}
+
+.depoimentos-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.depoimento{
+    padding:24px 20px;
+    border-radius:18px;
+}
+
+.depoimento p{
+    font-size:16px;
+}
+    
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="inicio">
+
+    <nav class="navbar">
+
+        <div class="logo">
+            REOBOTE CHAVEIRO 24H
+        </div>
+
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Quem Somos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="hero-buttons">
+
+            <a href="https://wa.me/5521975727349" class="btn-whatsapp">
+
+
+    <span>CHAMAR NO WHATSAPP</span>
+
+</a>
+</a>
+
+            <a href="tel:+5521975727349" class="btn-ligar">
+                LIGAR AGORA
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="barra-info fade-in">
+
+    <div class="item-info">
+        <i class="fa-solid fa-clock"></i>
+        <h3>24 HORAS</h3>
+        <p>Atendimento emergencial</p>
+    </div>
+
+    <div class="item-info">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>RÁPIDO</h3>
+        <p>Suporte imediato</p>
+    </div>
+
+    <div class="item-info">
+        <i class="fa-solid fa-key"></i>
+        <h3>RESIDENCIAL</h3>
+        <p>Automotivo e comercial</p>
+    </div>
+
+    <div class="item-info">
+        <i class="fa-solid fa-credit-card"></i>
+        <h3>PAGAMENTO</h3>
+        <p>PIX • Cartão • Dinheiro</p>
+    </div>
+
+</section>
+
+<section class="servicos fade-in" id="servicos">
+
+    <div class="titulo-section">
+        <h2>Nossos Serviços</h2>
+        <p>Atendimento rápido, profissional e 24 horas.</p>
+    </div>
+
+    <div class="servicos-grid">
+
+        <div class="servico">
+            <h3>🔐 Abertura de Portas</h3>
+
+            <ul>
+                <li>Residencial</li>
+                <li>Comercial</li>
+                <li>24 horas</li>
+                <li>Sem danificar fechaduras</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                CHAMAR AGORA
+            </a>
+        </div>
+
+        <div class="servico">
+            <h3>🔑 Confecção de Chaves</h3>
+
+            <ul>
+                <li>Chaves residenciais</li>
+                <li>Chaves comerciais</li>
+                <li>Cópias rápidas</li>
+                <li>Atendimento imediato</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                  FAZER CHAVE
+            </a>
+        </div>
+
+        <div class="servico">
+            <h3>🚗 Chave Automotiva</h3>
+
+            <ul>
+                <li>Carros nacionais</li>
+                <li>Carros importados</li>
+                <li>Codificação</li>
+                <li>Atendimento rápido</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                 SOLICITAR
+            </a>
+        </div>
+
+        <div class="servico">
+            <h3>🛠️ Troca de Segredos</h3>
+
+            <ul>
+                <li>Residencial</li>
+                <li>Comercial</li>
+                <li>Segurança reforçada</li>
+                <li>Atendimento rápido</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                 TROCAR
+            </a>
+        </div>
+
+        <div class="servico">
+            <h3>📱 Chaves Codificadas</h3>
+
+            <ul>
+                <li>Codificação</li>
+                <li>Programação</li>
+                <li>Automotivas</li>
+                <li>Atendimento imediato</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                 CODIFICAR
+            </a>
+        </div>
+
+        <div class="servico">
+            <h3>🚨 Atendimento Emergencial</h3>
+
+            <ul>
+                <li>24 horas</li>
+                <li>Niterói e região</li>
+                <li>Suporte rápido</li>
+                <li>WhatsApp imediato</li>
+            </ul>
+
+            <a href="https://wa.me/5521975727349" class="btn-servico">
+                 ATENDIMENTO
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="sobre fade-in" id="sobre">
+
+    <div class="sobre-container">
+
+        <img src="img/sobre.webp" alt="Chaveiro">
+
+        <div class="sobre-texto">
+
+            <h2>Quem Somos</h2>
+
+            <p>
+                A REOBOTE CHAVEIRO 24H atua em Niterói e região oferecendo atendimento rápido, seguro e profissional.
+            </p>
+
+            <br>
+
+            <p>
+                Trabalhamos com abertura de portas, confecção de chaves, serviços automotivos e atendimento emergencial 24 horas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="depoimentos fade-in">
+
+    <div class="titulo-section">
+        <h2>O que nossos clientes dizem</h2>
+        <p>Atendimento rápido, profissional e confiável.</p>
+    </div>
+
+    <div class="depoimentos-grid">
+
+        <div class="depoimento">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Chegou muito rápido e resolveu sem danificar minha porta. Atendimento excelente.”
+            </p>
+
+            <h4>Marcos Vinicius - Niterói-RJ</h4>
+
+        </div>
+
+        <div class="depoimento">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Precisei de chave automotiva de madrugada e fui atendida imediatamente.”
+            </p>
+
+            <h4>Aline Souza - Niterói-RJ</h4>
+
+        </div>
+
+        <div class="depoimento">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                “Profissional muito educado e serviço rápido. Recomendo bastante.”
+            </p>
+
+            <h4>Carlos Henrique - São Gonçalo -RJ</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta fade-in" id="contato">
+
+    <h2>Precisando de um chaveiro agora?</h2>
+
+    <p>
+        Atendimento imediato via WhatsApp.
+    </p>
+
+  <a href="https://wa.me/5521975727349" class="btn-whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>CHAMAR NO WHATSAPP</span>
+
+</a>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 REOBOTE CHAVEIRO 24H • Niterói-RJ
+    </p>
+
+</footer>
+
+<script>
+
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+
+    });
+
+}, {
+    threshold:0.15
+});
+
+fadeElements.forEach((element) => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
