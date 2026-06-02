@@ -287,30 +287,25 @@ body{
 }
 
 .sobre-container{
-    max-width:1200px;
+    max-width:1300px;
     margin:auto;
 
     display:grid;
-    grid-template-columns: 480px 1fr;
-
-    gap:40px;
-
-    align-items:center;
+    grid-template-columns:60% 40%;
 
     background:#1d1d1d;
-
-    padding:40px;
-
     border-radius:24px;
+
+    overflow:hidden;
 }
 
 .sobre img{
     width:100%;
-    max-width:480px;
+    height:100%;
 
-    border-radius:20px;
+    object-fit:cover;
 
-    display:block;
+    border-radius:0;
 }
 
 .sobre-texto{
