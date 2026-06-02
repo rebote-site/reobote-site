@@ -413,6 +413,7 @@ footer p{
 
 
 /* RESPONSIVO */
+    
 @media(max-width:900px){
 
     .logo{
@@ -460,31 +461,34 @@ footer p{
 
 }
 
-@media(max-width:900px)
-
-    /* NAVBAR */
+@media(max-width:900px){
 
     .navbar{
-        padding:18px 18px;
+        display:flex;
         flex-direction:column;
-        gap:16px;
+        align-items:center;
+        gap:20px;
+        padding:20px;
     }
 
     .logo{
-        font-size:24px;
+        font-size:18px;
         text-align:center;
         line-height:1.2;
     }
 
     .menu{
-        gap:14px;
-        flex-wrap:wrap;
+        display:flex;
         justify-content:center;
+        flex-wrap:wrap;
+        gap:18px;
     }
 
     .menu a{
-        font-size:15px;
+        font-size:16px;
     }
+
+}
 
     /* HERO */
 
